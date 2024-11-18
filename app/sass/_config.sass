@@ -1,0 +1,120 @@
+// USER VARIABLES SECTION
+//  100 - Thin (Hairline)
+//  200 - Extra Light (Ultra Light)
+//  300 - Light
+//  400 - Regular (Normal)
+//  500 - Medium
+//  600 - Semi Bold (Demi Bold)
+//  700 - Bold
+//  800 - Extra Bold (Ultra Bold)
+//  900 - Black (Heavy)
+
+// Стандартные брейкпоинты Bootstrap 5:
+// xs — 0px
+// sm — 576px
+// md — 768px
+// lg — 992px
+// xl — 1200px
+// xxl — 1400px
+
+$accent: #F88500 // Accent Color
+$textcolor: #333 // Text Color
+$dark: #202328
+$deep: #171A1A
+$middle-gray: rgba(#6F7A8B, .75)
+$fontsize: 14px // Body Font Size
+$lineheight: 1.7 // Document Line Height
+$userfont: montserrat-t, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+
+// @import 'app/libs/font-awesome/css/font-awesome.min'
+// @import 'node_modules/swiper/swiper-bundle'
+
+//  @import '../../node_modules/swiper/swiper-bundle';
+// расширение файла не пишем ! (css)
+
+// @import 'node_modules/swiper/swiper-bundle.min'
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+		font-display: swap
+
+@include font('montserrat-t', normal, 400, '../fonts/MontserratAlternates-Regular.woff2')
+@include font('montserrat-t', normal, 600, '../fonts/MontserratAlternates-SemiBold.woff2')
+// @include font('roboto-t', italic, 700, '../fonts/roboto-v29-cyrillic-700.woff2')
+
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	min-height: 100%
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+html
+	box-sizing: border-box
+	scroll-behavior: smooth
+	height: 100%
+
+*, *::after, *::before
+	box-sizing: inherit
+
+ul[class], ol[class] 
+	padding: 0
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd 
+	margin: 0
+
+ul[class] 
+	list-style: none
+
+img 
+	max-width: 100%
+	display: block
+input, button, textarea, select 
+	font: inherit
+
+button
+	margin: 0
+	padding: 0
+	border: none
+	cursor: pointer
+
+a
+	text-decoration: none
+
+input:focus, button:focus, textarea:focus
+	outline: 2px solid $accent
