@@ -19,12 +19,12 @@
 
 $accent: #F88500 // Accent Color
 $textcolor: #333 // Text Color
-$dark: #202328
-$deep: #171A1A
-$middle-gray: rgba(#6F7A8B, .75)
+$accent-white: #FFF8F3
+$bez-1: #7B6152
+// $middle-gray: rgba(#6F7A8B, .75)
 $fontsize: 14px // Body Font Size
-$lineheight: 1.7 // Document Line Height
-$userfont: montserrat-t, sans-serif // User Font Family
+$lineheight: 1.2 // Document Line Height
+$userfont: comfortaa-c, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -53,9 +53,11 @@ $gutter: $grid-gutter-width
 		src: url($furl) format('woff2')
 		font-display: swap
 
-@include font('montserrat-t', normal, 400, '../fonts/MontserratAlternates-Regular.woff2')
-@include font('montserrat-t', normal, 600, '../fonts/MontserratAlternates-SemiBold.woff2')
-// @include font('roboto-t', italic, 700, '../fonts/roboto-v29-cyrillic-700.woff2')
+@include font('comfortaa-c', normal, 400, '../fonts/Comfortaa-Regular.woff2')
+@include font('comfortaa-c', normal, 600, '../fonts/Comfortaa-SemiBold.woff2')
+@include font('comfortaa-c', normal, 700, '../fonts/Comfortaa-Bold.woff2')
+@include font('yaseva-c', normal, 400, '../fonts/YasevaOne-Regular.woff2')
+@include font('roboto-c', normal, 400, '../fonts/RobotoRegular.woff2')
 
 
 // GENERAL CSS SETTINGS
@@ -115,6 +117,39 @@ button
 
 a
 	text-decoration: none
+	color: inherit
 
 input:focus, button:focus, textarea:focus
 	outline: 2px solid $accent
+
+.wrapper 
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+
+.main 
+	flex: 1 0 auto
+
+.footer 
+	flex: 0 0 auto
+	// background-color: $accent
+
+.container
+	max-width: 1180px
+	margin: 0 auto
+	padding: 0 10px
+
+.test
+	height: 100vh
+
+// %text-10-adapt
+// 	font-size: 10px
+// 	line-height: 1.5
+
+=text-14
+	font-size: 14px
+	line-height: 1.2
+
+=text-10-adapt
+	font-size: 10px
+	line-height: 1.5

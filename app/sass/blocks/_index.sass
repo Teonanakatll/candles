@@ -1,0 +1,61 @@
+.header
+	background-color: $accent-white
+	margin-top: 4px
+	&__container
+		display: flex
+		align-items: center
+		justify-content: space-between
+		height: 70px
+	.menu
+		&__btn
+			width: 30px
+			display: flex
+			flex-direction: column
+			gap: 5px
+			display: none
+		span
+			width: 30px
+			height: 1px
+			background-color: $bez-1
+
+.menu
+	text-transform: uppercase
+	&__list
+		display: flex
+		align-items: center
+		gap: 20px
+.phone
+	position: relative
+	padding-left: 20px
+	&::before
+		content: ''
+		background-image: url(../images/sprite.svg#phone-ico)
+		position: absolute
+		top: 0
+		left: 0
+		width: 15px
+		height: 15px
+
+.footer
+	padding-top: 40px
+	padding-bottom: 35px
+	&__container
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__contacts
+		display: flex
+		flex-direction: column
+		margin-right: 24px
+	.phone
+		padding-left: 0
+		&::before
+			display: none
+	&__email
+		margin: 17px 0
+	&__social
+		display: flex
+		gap: 15px
+	&__social-svg
+		height: 18px
+		width: 18px

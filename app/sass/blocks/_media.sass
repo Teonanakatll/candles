@@ -1,0 +1,71 @@
+@media (max-width: 1000px)
+	.container
+		padding-left: 20px
+		padding-right: 20px
+
+@media (max-width: 900px)
+	.footer
+		&__container
+			flex-wrap: wrap
+		&__contacts
+			width: 100%
+			text-align: center
+			padding-top: 15px
+		&__social
+			justify-content: center
+
+@media (max-width: 790px)
+	.menu__list
+		gap: 15px
+
+@media (max-width: 768px)
+	body
+		+text-10-adapt
+	.container
+		max-width: 640px
+	.menu__list
+		gap: 20px
+	.header
+		margin-top: 0
+	.phone
+		padding-left: 18px
+		&::before
+			width: 14px
+			height: 14px
+			top: -2px
+	.footer
+		&__email
+			margin: 10px 0
+
+@media (max-width: 640px)
+	.container
+		padding: 0 10px
+	.header
+		position: relative
+		.menu
+			order: 1
+			&__list
+				position: absolute
+				left: 0
+				top: 0
+				flex-direction: column
+				background-color: $bez-1
+				color: $accent-white
+				min-width: 153px
+				padding: 25px 35px 45px
+				transform: translateY(-110%)
+				transition: transform .5s ease-out
+			&__list.menu--open
+				transform: translateY(0%)
+			&__btn
+				display: flex
+
+@media (max-width: 500px)
+	.footer
+		+text-14
+		&__container
+			flex-direction: column
+		.menu__list
+			flex-direction: column
+			margin: 50px 0
+			gap: 22px
