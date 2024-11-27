@@ -1,7 +1,128 @@
+@media (max-width: 1200px)
+	.about
+		&__list
+			right: -70px
+
+	.section
+		&__container
+			grid-template-columns: 35 0px auto
+
+	.products
+		&__content
+			gap: 50px 20px
+
+//                      _1000
 @media (max-width: 1000px)
+	.title
+		font-size: 30px
+
 	.container
 		padding-left: 20px
 		padding-right: 20px
+
+	.top
+		&__content
+			width: 333px
+			padding: 95px 0 200px
+		&__img-1
+			width: 655px
+			left: 300px
+
+	.about
+		&__container::after
+			left: 338px
+		&__decor-icon
+			left: 318px
+		&__content
+			min-width: 300px
+			// width: 300px
+		&__list
+			right: auto
+			left: 20px
+		&__item-text
+			font-size: 11px
+
+	.section
+		&__container
+			grid-template-columns: 290px auto
+			gap: 0 10px
+		&__text
+			+text-10-adapt
+		&--decor
+			padding-bottom: 50px
+
+	.products
+		&__content
+			gap: 67px
+
+	.steps
+		&__list
+			gap: 35px
+		&__item
+			height: 230px
+			// gap: 0 30px
+		&__item-img
+			min-width: 120px
+			height: 100%
+
+	.courses
+		&__content
+			gap: 0 60px
+		&__item
+			min-width: none
+		&__box-img
+			min-width: 268px
+
+	.team
+		padding: 50px 0
+		&__title
+			font-size: 35px
+		&__content
+			gap: 30px 20px
+
+	.feedback
+		&__descr
+			padding-right: 0
+		&__title
+			font-size: 30px
+		&__item-text
+			font-size: 10px
+
+	.sertificates
+		&__descr
+			padding-right: 0
+		&__slider
+			width: 696px
+		&__slide
+			max-width: 280px
+			height: 180px
+
+	.promo
+		&__text
+			font-size: 30px
+
+	.contacts
+		.form
+			margin-right: 50px
+			margin-top: 20px
+		&__img
+			height: 510px
+			width: 335px
+
+@media (max-width: 950px)
+	.courses
+		&__content
+			gap: 0 40px
+
+	.feedback
+		&__item-video
+			min-width: 280px
+			height: auto
+		&__item-btn
+			font-size: 10px
+		// &__slide
+		// 	max-width: 250px
+		// 	height: 240px
 
 @media (max-width: 900px)
 	.footer
@@ -14,15 +135,108 @@
 		&__social
 			justify-content: center
 
+	.section
+		&__container
+			grid-template-columns: 200px auto
+			gap: 0 30px
+		&__content
+			gap: 40px
+
+	.title
+		font-size: 25px
+
+	.steps
+		&__container
+			gap: 0 4px
+
+	.courses
+		&__item
+			min-width: 195px
+		&__box-img
+			min-width: 195px
+			min-height: 265px
+
+	.team__container
+		gap: 8px
+
+	.contacts
+		.form
+			margin-right: 20px
+
+	.questions
+		.accordeon
+			margin-left: -30px
+			&__title
+				font-size: 12px
+			&__arrow
+				margin-left: 15px
+				min-width: 9px
+				max-width: 9px
+				height: 13px
+			&__text
+				font-size: 12px
+
+
 @media (max-width: 790px)
 	.menu__list
 		gap: 15px
 
+	.team
+		&__content
+			gap: 24px 14px
+		&__item-img
+			min-height: auto
+			height: 155px
+			width: 143px
+		&__item-box
+			padding: 10px 6px
+			width: 116px
+			// left: 230px
+		&__item-nam
+			font-size: 8px
+		&__item-descr
+			font-size: 7px
+
+	.feedback
+		&__container
+			gap: 0 18px
+		&__item-content
+			margin-left: 11px
+			padding-top: 0
+		&__item-video
+			min-width: 180px
+			max-width: 200px
+			height: 200px
+		&__item-socialicon
+			margin-bottom: 10px
+			width: 15px
+			height: 15px
+		&__item-name
+			margin-bottom: 10px
+			font-size: 12px
+		&__item-text
+			margin-bottom: 35px
+		&__item-btn
+			padding: 15px 20px
+		&__pagination
+			margin-top: 0
+			text-align-last: left
+			position: relative
+			transform: translateX(20%)
+
+	.sertificates
+		&__pagination
+			text-align: left
+			transform: translateX(20%)
+
+//                        _768
 @media (max-width: 768px)
 	body
-		+text-10-adapt
+		font-size: 10px
 	.container
 		max-width: 640px
+		padding-left: 10px
+		padding-right: 10px
 	.menu__list
 		gap: 20px
 	.header
@@ -36,6 +250,170 @@
 	.footer
 		&__email
 			margin: 10px 0
+
+	.top
+		&__content
+			width: 230px
+		&__title
+			font-size: 20px
+		&__text
+			margin-bottom: 20px
+			line-height: 1.5
+		&__buy
+			padding: 14.5px 30.5px
+		&__img-1
+			left: 181px
+
+	button
+		font-size: 14px
+
+	.about
+		padding-top: 50px
+		padding-bottom: 90px
+		&__container
+			align-items: center
+		&__content
+			min-width: 200px
+			position: relative
+			line-height: 1.1
+		&__title
+			margin-bottom: 10px
+		&__text
+			margin-bottom: 10px
+		&__list
+			left: 40px
+			gap: 10px
+			margin-top: 0
+			margin-bottom: 30px
+		&__item
+			min-width: 120px
+		&__item-text
+			font-size: 6px
+			margin-top: 6px
+
+		&__item-center
+			min-width: 191px
+			height: auto
+		&__item-img-center
+			width: 191px
+			height: 195px
+		&__item-img
+			width: 120px
+			height: 120px
+		&__container::after
+			left: 257px
+		&__decor-icon
+			left: 237px
+
+	.title
+		font-size: 15px
+
+	.products
+		&__item
+			padding-bottom: 36px
+		&__item-img
+			margin-bottom: 5.5px
+		&__item-price, &__item-title
+			+podz-12
+		&__item-price
+			margin-bottom: 7px
+		&__item-title
+			margin-bottom: 10px
+		&__item-text
+			font-size: 8px
+			margin-bottom: 18.5px
+		&__item-btn
+			padding: 11.5px 25.5px
+
+	.button
+		font-size: 12px
+
+	.steps
+		&__list
+			gap: 24px 30px
+		&__item
+			height: 150px
+		&__item::before
+			font-size: 20px
+		&__item-img
+			min-width: 86px
+		&__item-text
+			font-size: 8px
+		&__item--odd
+			.steps__item-text
+				margin-right: 20px
+		&__item--even
+			.steps__item-text
+				margin-left: 20px
+
+	.courses
+		&__content
+			padding-bottom: 85px
+		&__item
+			min-width: auto
+			width: 100%
+		&__box-img
+			min-width: auto
+			min-height: auto
+		&__box
+			font-size: 8px
+		&__box-title
+			padding: 10px 10px 10px 5px
+			bottom: 44%
+			left: 0
+		&__box-time
+			padding: 5px 10px 5px 8px
+			bottom: 32%
+			left: 0
+		&__box-price
+			padding: 15px 15px 15px 8px
+			span
+				font-size: 8px
+		&__item-text
+			margin-bottom: 10px
+
+	.feedback
+		&__content
+			padding-bottom: 70px
+			min-width: 400px
+
+	.sertificates
+		&__descr
+			padding-right: 0
+		&__slider
+			width: 696px
+		&__slide
+			max-width: 200px
+			height: 128px
+
+	.promo
+		height: 150px
+		&__container
+			justify-content: space-between
+		&__text
+			font-size: 15px
+			margin-right: 0
+		&__link
+			padding: 13.5px 18.5px
+			align-self: end
+			margin-bottom: 30px
+			margin-right: 50px
+
+	.contacts
+		.form
+			margin-right: 33px
+			width: 400px
+			&__title
+				font-size: 15px
+				margin-bottom: 20px
+			&__input::placeholder
+				font-size: 8px
+			&__button
+				margin-top: 30px
+				padding: 17px 34px
+		&__img
+			width: 187px
+			max-height: 285px
 
 @media (max-width: 640px)
 	.container
@@ -60,6 +438,72 @@
 			&__btn
 				display: flex
 
+	.section
+		&__container
+			display: block
+			text-align: center
+			margin-top: 50px
+		&__descr
+			width: 300px
+			margin: 0 auto
+		&__text
+			margin-bottom: 30px
+
+	.products
+		&__content
+			padding-left: 15px
+			padding-right: 15px
+
+	.section--decor
+		&::before
+			left: 0
+		&::after
+			left: 21px
+
+	.steps
+		&__list
+			gap: 25px 40px
+		&__item
+			max-width: 230px
+			margin: 0 auto
+			text-align: left
+		&__list.section__content
+			padding-bottom: 50px
+
+	.team
+		&__content
+			gap: 30px
+
+	.feedback
+		&__slider
+			// max-width: 460px
+			margin: 0 auto
+		&__item
+			justify-content: space-between
+			max-width: 100% // sdfsdfsd
+		&__content
+			text-align: left
+
+	.sertificates
+		&__slider
+			width: 100%
+		&__pagination
+			transform: none
+			text-align: center
+
+	.questions
+		.accordeon
+			margin-left: 0
+			text-align: left
+			&__button
+				padding-left: 0
+				text-wrap: wrap
+			&__title
+				text-align: left
+			&__text
+				ol
+					padding-left: 15px
+
 @media (max-width: 500px)
 	.footer
 		+text-14
@@ -69,3 +513,283 @@
 			flex-direction: column
 			margin: 50px 0
 			gap: 22px
+
+	.feedback
+		&__content
+			padding-bottom: 50px
+		&__slider
+			// max-width: 100%
+			margin: 0
+		&__slide
+			// max-width: 100%
+		&__item
+			padding-bottom: 30px
+		&__item-video
+			width: 100%
+			height: auto
+		&__item-content
+			width: 100%
+		&__pagination
+			transform: none
+			text-align-last: center
+			left: 0
+
+//                    _480
+@media (max-width: 480px)
+	.top
+		&__content
+			width: 180px
+			padding-top: 70px
+			padding-bottom: 80px
+		&__title
+			font-size: 15px
+		&__text
+			font-size: 8px
+			margin-bottom: 15px
+		&__buy
+			padding: 11px 23px
+			font-size: 10px
+		&__img-1
+			width: 310px
+
+	button
+		font-size: 12px
+
+	.about
+		padding-bottom: 50px
+		&__content
+			min-width: 170px
+		&__list
+			margin-bottom: 30px
+			left: 17px
+			align-items: end
+			gap: 5px
+		&__item
+			min-width: 80px
+		&__item-text
+			display: none
+
+		&__item-center
+			min-width: 140px
+			height: auto
+		&__item-img-center
+			width: 140px
+			height: 140px
+		&__item-img
+			width: 80px
+			height: 80px
+		&__container::after
+			left: 205px
+		&__decor-icon
+			left: 185px
+
+	.steps
+		&__item--odd
+			.steps__item-text
+				margin-right: 10px
+		&__item--even
+			.steps__item-text
+				margin-left: 10px
+		&__item-img
+			min-width: 70px
+
+	.courses
+		margin-bottom: 50px
+		&__content
+			gap: 0 30px
+			padding: 0 0 50px
+
+	.questions
+		.accordeon
+			&__text
+				height: 100%
+				padding-right: 20px
+				ol
+					margin-bottom: 10px
+					display: block
+
+	.promo
+		height: 120px
+		&__text
+			margin-left: 45px
+		&__link
+			padding: 11.5px 16.5px
+			margin-right: 42px
+			align-self: center
+			margin-bottom: 0
+
+	.contacts
+		margin-top: 50px
+		&__img
+			display: none
+		.form
+			width: 400px
+			&__button
+				font-size: 8px
+				padding: 15px 13px     
+
+@media (max-width: 460px)
+	.feedback
+		&__content
+			min-width: 280px
+		&__item
+			display: block
+			text-align: center
+			padding-bottom: 35px
+		&__item-video
+			margin: 0 auto
+			height: 250px
+			max-width: 250px
+			margin-bottom: 5px
+		&__item-content
+			margin-left: 0
+		&__item-text
+			width: 250px
+			margin: 0 auto 20px
+		&__item-btn
+			margin: 0 auto
+
+	.promo
+		&__text
+			margin-left: 0
+		&__link
+			margin-right: 0
+
+@media (max-width: 400px)
+	.team
+		&__content
+			display: block
+		&__item-img
+			width: 204px
+			height: 220px
+			margin: 0 20px 20px 15px
+		&__item-box
+			padding: 15px 8px
+			width: 162px
+		&__item-nam
+			font-size: 11px
+		&__item-descr
+			font-size: 9px
+
+@media (max-width: 360px)
+	body
+		font-size: 8px
+	.title
+		margin-bottom: 10px
+	.top
+		margin-top: 30px
+		&__content
+			width: 200px
+			padding-top: 30px
+			padding-bottom: 0
+		&__title
+			font-size: 18px
+		&__text
+			font-size: 10px
+		&__img-1
+			width: 170px
+			height: auto
+			left: auto
+			right: -15px
+			top: 0
+
+	.about
+		padding-bottom: 20px
+		&__content
+			min-width: auto
+		&__list
+			margin-bottom: 32px
+			left: 0
+			margin-left: 25px
+			align-items: center
+			gap: 5px
+
+		&__item-center
+			display: none
+		&__item:last-child
+			display: none
+		&__container::after
+			left: calc(100vw - 85px)
+			right: 0
+		&__decor-icon
+			left: auto
+			right: 80px
+
+	.section
+		&__text
+			font-size: 8px
+			margin-bottom: 25px
+		&__descr
+			width: 235px
+
+	.products
+		&__content
+			gap: 41px 7px
+			padding: 0 10px 50px
+		&__item
+			padding-bottom: 30px
+		&__item-img
+			margin-bottom: 4.5px
+		&__item-price, &__item-title
+			font-size: 10px
+		&__item-price
+			margin-bottom: 5px
+		&__item-title
+			margin-bottom: 7.5px
+		&__item-text
+			font-size: 6px
+			margin-bottom: 16.5px
+		&__item-btn
+			padding: 10.5px 22.5px
+
+	.button
+		font-size: 12px
+
+	.steps
+		&__list
+			gap: 22px 25px
+		&__item
+			height: 100px
+			&::before
+				font-size: 12px
+		&__item-text
+			font-size: 6px
+
+	.courses
+		&__content
+			display: flex
+			flex-direction: column
+		&__item-title
+			font-size: 12px
+		&__item-text
+			font-size: 10px
+		&__box
+			font-size: 11px
+		&__box-title
+			position: absolute
+			left: -1px
+			bottom: 46%
+			background: $bez
+			padding: 15px 15px 15px 10px
+		&__box-time
+			position: absolute
+			left: -1px
+			bottom: 35%
+			background-color: $bez
+			padding: 7px 16px 7px 10px
+			span
+				font-size: 10px
+				font-family: comfortaa-c
+		&__box-price
+			position: absolute
+			bottom: -13px
+			right: -14px
+			background-color: $bez
+			padding: 19px 19px 19px 10px
+
+	.sertificates
+		&__slider
+			max-width: 200px
+			margin: 0 auto
+		&__slide
+			max-width: 200px

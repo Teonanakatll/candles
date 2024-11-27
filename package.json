@@ -38,6 +38,7 @@
     "gulp-uglify-es": "^3.0.0",
     "gulp-webp": "^4.0.1",
     "jquery": "^3.7.1",
+    "locomotive-scroll": "^5.0.0-beta.21",
     "sass": "^1.79.3",
     "sharp": "^0.33.5",
     "swiper": "^11.1.14",

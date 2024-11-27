@@ -20,7 +20,10 @@
 $accent: #F88500 // Accent Color
 $textcolor: #333 // Text Color
 $accent-white: #FFF8F3
+$bez: #BEA495
 $bez-1: #7B6152
+$bez-2: #A5978E
+$gray: #fafafa
 // $middle-gray: rgba(#6F7A8B, .75)
 $fontsize: 14px // Body Font Size
 $lineheight: 1.2 // Document Line Height
@@ -37,12 +40,12 @@ $gutter: $grid-gutter-width
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 
 // @import 'app/libs/font-awesome/css/font-awesome.min'
-// @import 'node_modules/swiper/swiper-bundle'
 
 //  @import '../../node_modules/swiper/swiper-bundle';
 // расширение файла не пишем ! (css)
 
-// @import 'node_modules/swiper/swiper-bundle.min'
+@import 'node_modules/locomotive-scroll/dist/locomotive-scroll'
+@import 'node_modules/swiper/swiper-bundle.min'
 // FONTS LOAD SECTION
 
 @mixin font($fname, $fstyle, $fweight, $furl)
@@ -55,10 +58,9 @@ $gutter: $grid-gutter-width
 
 @include font('comfortaa-c', normal, 400, '../fonts/Comfortaa-Regular.woff2')
 @include font('comfortaa-c', normal, 600, '../fonts/Comfortaa-SemiBold.woff2')
-@include font('comfortaa-c', normal, 700, '../fonts/Comfortaa-Bold.woff2')
-@include font('yaseva-c', normal, 400, '../fonts/YasevaOne-Regular.woff2')
+@include font('comfortaa-c', normal, 700, '../fonts/ComfortaaBold.woff2')
+@include font('yeseva-c', normal, 400, '../fonts/YesevaOne-Regular.woff2')
 @include font('roboto-c', normal, 400, '../fonts/RobotoRegular.woff2')
-
 
 // GENERAL CSS SETTINGS
 
@@ -80,11 +82,12 @@ body
 	min-height: 100%
 	font-family: $userfont
 	font-size: $fontsize
-	line-height: $lineheight
+	// line-height: $lineheight
 	color: $textcolor
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
+	background-color: $accent-white
 
 html
 	box-sizing: border-box
@@ -94,19 +97,21 @@ html
 *, *::after, *::before
 	box-sizing: inherit
 
-ul[class], ol[class] 
+ul[class], ol[class]
 	padding: 0
 
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd 
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd
 	margin: 0
 
-ul[class] 
+ul[class]
 	list-style: none
 
-img 
+img
 	max-width: 100%
 	display: block
-input, button, textarea, select 
+	object-fit: cover
+
+input, button, textarea, select
 	font: inherit
 
 button
@@ -122,15 +127,21 @@ a
 input:focus, button:focus, textarea:focus
 	outline: 2px solid $accent
 
-.wrapper 
+.title
+	font-size: 40px
+	font-weight: 400
+	font-family: yeseva-c
+	margin-bottom: 15px
+
+.wrapper
 	display: flex
 	flex-direction: column
 	min-height: 100vh
 
-.main 
+.main
 	flex: 1 0 auto
 
-.footer 
+.footer
 	flex: 0 0 auto
 	// background-color: $accent
 
@@ -139,12 +150,44 @@ input:focus, button:focus, textarea:focus
 	margin: 0 auto
 	padding: 0 10px
 
-.test
-	height: 100vh
+.section--decor
+	position: relative
+	padding-bottom: 70px
+	&::before
+		content: ''
+		background-image: url('../images/candle-icon.png')
+		position: absolute
+		left: -22px
+		bottom: -10px
+		width: 22px
+		height: 30px
+	&::after
+		content: ''
+		background-color: $bez-1
+		width: calc(100% + 138px)
+		height: 1px
+		position: absolute
+		bottom: 0
+		left: 0px
 
-// %text-10-adapt
-// 	font-size: 10px
-// 	line-height: 1.5
+.swiper
+	&-pagination-bullet
+		width: 28px
+		height: 4px
+		border-radius: 0
+		background-color: $bez
+		opacity: 1
+	&-pagination-bullet-active
+		background-color: $bez-1
+		
+.pagination
+	text-align: center
+	margin-top: 10px
+
+button
+	font-weight: 600
+	background-color: #FFBD59
+	text-wrap: nowrap
 
 =text-14
 	font-size: 14px
@@ -152,4 +195,11 @@ input:focus, button:focus, textarea:focus
 
 =text-10-adapt
 	font-size: 10px
-	line-height: 1.5
+
+=podz-16
+	font-family: yeseva-c
+	font-size: 16px
+	font-weight: 400
+
+=podz-12
+	font-size: 12px

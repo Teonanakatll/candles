@@ -53,7 +53,7 @@ function fonts() {
 function images() {
 	return src(['app/images/src/**/*.*', '!app/images/src/**/*.svg', '!app/images/src/mini/*.*'])
 		.pipe(newer('app/images'))  // проверяет есть ли данные картинки в dist
-		.pipe(avif({ quality : 50 }))
+		.pipe(avif({ quality : 55 }))
 
 		.pipe(src(['app/images/src/**/*.*', '!app/images/src/mini/*']))
 		.pipe(newer('app/images'))  // проверяет есть ли данные картинки в dist
