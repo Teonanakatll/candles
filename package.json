@@ -47,6 +47,8 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "gm": "^1.25.0"
+    "@pixi/filter-displacement": "^7.4.2",
+    "gm": "^1.25.0",
+    "pixi.js": "^8.6.1"
   }
 }

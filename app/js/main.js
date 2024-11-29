@@ -2,10 +2,10 @@
 // import {animate} from "./gsap-test"
 import { setBackgrounds } from "./set-background"
 import Swiper from "swiper"
-
 import LocomotiveScroll from "locomotive-scroll"
-
 import { Parallax, Mousewheel, Controller, Pagination, Scrollbar, Navigation, Thumbs, Autoplay } from 'swiper/modules'
+import gsap from "gsap"
+
 // import { jqueryTest } from "./jquery";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,8 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
 			el: document.querySelector("body"),
 			duration: 2.7,
 			smooth: true,
+			smoothTouch: true,
 		},
 	})
+
+
+	const sliders = document.querySelectorAll('.slider')
+
+	sliders.forEach(slider => {
+		slider.addEventListener('mouseenter', () => {
+			scroll.stop();
+		});
+
+		slider.addEventListener('mouseleave', () => {
+			scroll.start();
+		});
+	});
 
 	const menuBtn = document.querySelector('.menu__btn');
 	const menuMobile = document.querySelector('.header .menu__list');
